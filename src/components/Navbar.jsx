@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { HiMenuAlt3, HiX } from "react-icons/hi"; // Import menu and close icons from react-icons
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,35 +27,57 @@ function Navbar() {
     };
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-8 py-4 text-black transition-all duration-300 md:px-16 lg:px-24 ${
-        isScrolled ? "bg-slate-50 shadow-lg" : "bg-transparent"
+        isScrolled || isMobileMenuOpen ? "bg-slate-50 shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
-        <div className="text-2xl font-extrabold tracking-tight text-blue-700">SengLeang</div>
+        <div className="text-2xl font-extrabold tracking-tight text-blue-700">
+          SengLeang
+        </div>
 
         {/* Navigation Links */}
-        <div
-          className={`hidden md:flex space-x-6 ${
-            isMobileMenuOpen ? "block" : "hidden"
-          }`}
-        >
-          <a href="/" className="block font-light text-gray-500 transition hover:text-blue-700">
+        <div className="hidden space-x-6 md:flex">
+          <a
+            href="/"
+            className="block font-light text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             Home
           </a>
-          <a href="#about" className="block font-light text-gray-500 transition hover:text-blue-700">
+          <a
+            href="#about"
+            className="block font-light text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             About Me
           </a>
-          <a href="#services" className="block font-light text-gray-500 transition hover:text-blue-700">
+          <a
+            href="#services"
+            className="block font-light text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             Services
           </a>
-          <a href="#projects" className="block font-light text-gray-500 transition hover:text-blue-700">
+          <a
+            href="#projects"
+            className="block font-light text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             Projects
           </a>
-          <a href="#contact" className="block font-light text-gray-500 transition hover:text-blue-700">
+          <a
+            href="#contact"
+            className="block font-light text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             Contact
           </a>
         </div>
@@ -66,46 +88,56 @@ function Navbar() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+          onClick={handleLinkClick}
         >
           Connect Me
         </motion.button>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMobileMenu}
-          className="p-2 transition-transform duration-300 rounded-lg md:hidden hover:bg-gray-200"
-        >
-          {isMobileMenuOpen ? (
-            <HiX className="text-2xl text-gray-700" />
-          ) : (
+        <div onClick={toggleMobileMenu} className="block md:hidden">
+          {!isMobileMenuOpen ? (
             <HiMenuAlt3 className="text-2xl text-gray-700" />
+          ) : (
+            <HiX className="text-2xl text-gray-700" />
           )}
-        </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <motion.div
+          className="fixed inset-0 z-40 bg-black bg-opacity-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          onClick={toggleMobileMenu}
+        />
+      )}
 
       {/* Mobile Menu Dropdown */}
       <motion.div
-        className={`md:hidden fixed top-0 right-0 w-4/5 bg-white shadow-lg transition-transform duration-300 ${
-          isMobileMenuOpen ? "transform translate-x-0" : "transform translate-x-full"
+        className={`fixed top-0 left-0 z-50 w-4/5 h-full bg-white shadow-lg transition-transform duration-300 ${
+          isMobileMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: isMobileMenuOpen ? 1 : 0, x: isMobileMenuOpen ? 0 : 100 }}
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: isMobileMenuOpen ? 1 : 0, x: isMobileMenuOpen ? 0 : -100 }}
         transition={{ duration: 0.3 }}
       >
         <div className="px-8 py-4 space-y-4">
-          <a href="#home" className="block transition hover:text-blue-700">
+          <a href="/" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
             Home
           </a>
-          <a href="#about" className="block transition hover:text-blue-700">
+          <a href="#about" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
             About Me
           </a>
-          <a href="#services" className="block transition hover:text-blue-700">
+          <a href="#services" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
             Services
           </a>
-          <a href="#projects" className="block transition hover:text-blue-700">
+          <a href="#projects" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
             Projects
           </a>
-          <a href="#contact" className="block transition hover:text-blue-700">
+          <a href="#contact" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
             Contact
           </a>
         </div>
