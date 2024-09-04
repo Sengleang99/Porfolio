@@ -20,7 +20,7 @@ function About() {
     <section className="py-20 text-white bg-blue-700" id="about">
       <div className="container flex flex-col items-center justify-center h-full px-8 mx-auto md:px-16 lg:px-24">
         <motion.h2
-          className="mb-12 text-4xl font-bold text-center"
+          className="mb-12 text-4xl font-extrabold tracking-tight text-center"
           ref={titleRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: isTitleInView ? 1 : 0, y: isTitleInView ? 0 : -50 }}
@@ -32,7 +32,7 @@ function About() {
           {/* Text and Skills Section */}
           <div className="w-full md:w-2/3">
             <motion.p
-              className="mb-8 text-lg text-center md:text-center"
+              className="mb-8 font-light text-center text-white lg:mb-16 dark:text-white sm:text-xl"
               ref={paragraphRef}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isParagraphInView ? 1 : 0, y: isParagraphInView ? 0 : 20 }}

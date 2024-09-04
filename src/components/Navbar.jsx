@@ -35,7 +35,7 @@ function Navbar() {
     >
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
-        <div className="text-2xl font-extrabold">SengLeang</div>
+        <div className="text-2xl font-extrabold tracking-tight text-blue-700">SengLeang</div>
 
         {/* Navigation Links */}
         <div
@@ -43,19 +43,19 @@ function Navbar() {
             isMobileMenuOpen ? "block" : "hidden"
           }`}
         >
-          <a href="/" className="block transition hover:text-blue-700">
+          <a href="/" className="block font-light text-gray-500 transition hover:text-blue-700">
             Home
           </a>
-          <a href="#about" className="block transition hover:text-blue-700">
+          <a href="#about" className="block font-light text-gray-500 transition hover:text-blue-700">
             About Me
           </a>
-          <a href="#services" className="block transition hover:text-blue-700">
+          <a href="#services" className="block font-light text-gray-500 transition hover:text-blue-700">
             Services
           </a>
-          <a href="#projects" className="block transition hover:text-blue-700">
+          <a href="#projects" className="block font-light text-gray-500 transition hover:text-blue-700">
             Projects
           </a>
-          <a href="#contact" className="block transition hover:text-blue-700">
+          <a href="#contact" className="block font-light text-gray-500 transition hover:text-blue-700">
             Contact
           </a>
         </div>

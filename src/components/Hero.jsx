@@ -41,7 +41,7 @@ function Hero() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
       />
       <motion.h1
-        className="mb-3 text-4xl"
+        className="mb-3 text-4xl font-light text-center text-gray-500 dark:text-gray-400 "
         ref={titleRef}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: isTitleInView ? 0 : -50, opacity: isTitleInView ? 1 : 0 }}
@@ -59,7 +59,7 @@ function Hero() {
         Web & App Developer
       </motion.span>
       <motion.p
-        className="px-4 mt-4 text-lg text-gray-700"
+        className="px-4 mt-4 mb-8 font-light text-center text-gray-500 lg:mb-16 dark:text-gray-400 sm:text-xl"
         ref={paraRef}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isParaInView ? 1 : 0, y: isParaInView ? 0 : 20 }}
