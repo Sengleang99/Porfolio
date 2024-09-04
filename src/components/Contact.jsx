@@ -11,7 +11,7 @@ function Contact() {
     return (
         <div className='text-black bg-slate-50' id='contact'>
             <div className='container flex flex-col items-center justify-center h-full px-8 mx-auto md:px-16 lg:px-24'>
-                <section ref={ref} className="bg-white dark:bg-gray-900">
+                <section ref={ref} className="bg-white">
                     <motion.div
                         className="max-w-screen-md px-4 py-8 mx-auto lg:py-16"
                         initial={{ opacity: 0, y: 30 }}
