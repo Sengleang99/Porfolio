@@ -18,19 +18,19 @@ function Footer() {
   const { ref: contactRef } = useInView({ triggerOnce: false, threshold: 0.1 });
 
   return (
-    <footer className="py-8 text-black bg-slate-50" data-aos="fade-up">
+    <footer className="py-8 text-black bg-slate-50">
       <div className="container px-8 mx-auto">
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           {/* Footer Links */}
-          <div
-            className="w-full mb-6 text-center md:mb-0 md:w-auto md:text-left"
+          <div 
+          data-aos="fade-up"
+            className="w-full mb-6 text-center md:mb-0 md:w-auto md:text-left" 
             ref={linksRef}
           >
-            <h2 className="mb-4 text-xl font-bold">Quick Links</h2>
+            <h2 data-aos="fade-up" className="mb-4 text-xl font-bold">Quick Links</h2>
             <ul className="space-y-2 text-gray-500 dark:text-gray-400">
-              <li><a href="#services" className="hover:underline">Services</a></li>
-              <li><a href="#project" className="hover:underline">Project</a></li>
-              <li><a href="#about" className="hover:underline">About Me</a></li>
+              <li><a href="#about" className="hover:underline">Project</a></li>
+              <li><a href="#portfolio" className="hover:underline">About Me</a></li>
               <li><a href="#contact" className="hover:underline">Contact</a></li>
             </ul>
           </div>
@@ -40,8 +40,8 @@ function Footer() {
             className="w-full mb-6 text-center md:mb-0 md:w-auto"
             ref={socialRef}
           >
-            <h2 className="mb-4 text-xl font-bold tracking-tight">Follow Me</h2>
-            <div className="flex justify-center space-x-4">
+            <h2 data-aos="fade-up" className="mb-4 text-xl font-bold tracking-tight">Follow Me</h2>
+            <div data-aos="fade-up" className="flex justify-center space-x-4">
               <a
                 href="https://web.facebook.com/yan.sengleang/"
                 target="_blank"

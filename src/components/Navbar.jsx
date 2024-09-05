@@ -33,12 +33,14 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-8 py-4 text-black transition-all duration-300 md:px-16 lg:px-24 ${
-        isScrolled || isMobileMenuOpen ? "bg-slate-50 shadow-lg" : "bg-transparent"
+        isScrolled || isMobileMenuOpen
+          ? "bg-slate-50 shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
-        <div className="text-2xl font-extrabold tracking-tight text-blue-700">
+        <div className="text-2xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-blue-700 via-teal-600 to-pink-500 bg-clip-text">
           SengLeang
         </div>
 
@@ -46,35 +48,29 @@ function Navbar() {
         <div className="hidden space-x-6 md:flex">
           <a
             href="/"
-            className="block font-light text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Home
           </a>
           <a
             href="#about"
-            className="block font-light text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             About Me
           </a>
           <a
-            href="#services"
-            className="block font-light text-gray-500 transition hover:text-blue-700"
+            href="#portfolio"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
-            Services
+            Portfolio
           </a>
-          <a
-            href="#projects"
-            className="block font-light text-gray-500 transition hover:text-blue-700"
-            onClick={handleLinkClick}
-          >
-            Projects
-          </a>
+
           <a
             href="#contact"
-            className="block font-light text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Contact
@@ -110,23 +106,38 @@ function Navbar() {
       {/* Mobile Menu Dropdown */}
       <div
         className={`fixed top-0 left-0 z-50 w-4/5 h-full bg-white shadow-lg transition-transform duration-300 ${
-          isMobileMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
+          isMobileMenuOpen
+            ? "transform translate-x-0"
+            : "transform -translate-x-full"
         }`}
       >
         <div className="px-8 py-4 space-y-4">
-          <a href="/home" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a
+            href="/"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             Home
           </a>
-          <a href="#about" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a
+            href="#about"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             About Me
           </a>
-          <a href="#services" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
-            Services
+          <a
+            href="#portfolio"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
+            Portfolio
           </a>
-          <a href="#projects" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
-            Projects
-          </a>
-          <a href="#contact" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a
+            href="#contact"
+            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            onClick={handleLinkClick}
+          >
             Contact
           </a>
         </div>

@@ -28,8 +28,8 @@ function Contact() {
                         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                     >
-                        <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-center sm:text-4xl">
-                            Contact Us
+                        <h2 className="mb-4 text-5xl font-extrabold tracking-tight text-center text-gray-900 sm:text-center sm:text-4xl">
+                            Contact Me
                         </h2>
                         <p className="mb-6 font-light text-center text-gray-500 lg:mb-8 dark:text-gray-400 sm:text-lg">
                             Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.

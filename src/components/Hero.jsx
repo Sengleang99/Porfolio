@@ -51,7 +51,7 @@ function Hero() {
         <span className="font-light text-gray-400">I'm Sengleang</span>
       </motion.h1>
       <motion.span
-        className="text-3xl font-semibold tracking-tight text-center text-blue-500"
+        className="text-3xl font-semibold tracking-tight text-center text-blue-700"
         ref={spanRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: isSpanInView ? 1 : 0 }}
@@ -85,7 +85,7 @@ function Hero() {
           animate={{ opacity: isBtn2InView ? 1 : 0, scale: isBtn2InView ? 1 : 0.8 }}
           transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
         >
-          <a href="https://your-resume-url.com" target="_blank" rel="noopener noreferrer">View Resume</a>
+          <a href="https://drive.google.com/file/d/1JzedPfM2hUagdIIHzjtyFxp9mFVDVjh9/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
         </motion.button>
       </div>
     </div>

@@ -77,8 +77,8 @@ function About() {
               <SkillProgress skill="React Js" level="75%" />
               <SkillProgress skill="PHP & Laravel" level="75%" />
               <SkillProgress skill="SQL & Mysql" level="75%" />
-              <SkillProgress skill="Flutter" level="60%" />
-              <SkillProgress skill="Figma" level="75%" />
+              <SkillProgress skill="Flutter" level="55%" />
+              <SkillProgress skill="Figma" level="65%" />
               {/* Add more skills as needed */}
             </div>
             <div className="mt-12">
