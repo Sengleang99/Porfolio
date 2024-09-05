@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 function Navbar() {
@@ -83,15 +82,12 @@ function Navbar() {
         </div>
 
         {/* 'Connect Me' Button */}
-        <motion.button
+        <button
           className="hidden px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-t from-green-400 to-blue-500 md:inline hover:scale-105"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
           onClick={handleLinkClick}
         >
           Connect Me
-        </motion.button>
+        </button>
 
         {/* Mobile Menu Button */}
         <div onClick={toggleMobileMenu} className="block md:hidden">
@@ -105,43 +101,36 @@ function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <motion.div
+        <div
           className="fixed inset-0 z-40 bg-black bg-opacity-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
           onClick={toggleMobileMenu}
         />
       )}
 
       {/* Mobile Menu Dropdown */}
-      <motion.div
+      <div
         className={`fixed top-0 left-0 z-50 w-4/5 h-full bg-white shadow-lg transition-transform duration-300 ${
           isMobileMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: isMobileMenuOpen ? 1 : 0, x: isMobileMenuOpen ? 0 : -100 }}
-        transition={{ duration: 0.3 }}
       >
         <div className="px-8 py-4 space-y-4">
-          <a href="/" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a href="/home" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
             Home
           </a>
-          <a href="#about" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a href="#about" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
             About Me
           </a>
-          <a href="#services" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a href="#services" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
             Services
           </a>
-          <a href="#projects" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a href="#projects" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
             Projects
           </a>
-          <a href="#contact" className="block transition hover:text-blue-700" onClick={handleLinkClick}>
+          <a href="#contact" className="block font-light text-gray-500 transition hover:text-blue-700" onClick={handleLinkClick}>
             Contact
           </a>
         </div>
-      </motion.div>
+      </div>
     </nav>
   );
 }

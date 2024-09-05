@@ -1,8 +1,18 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 function Contact() {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Set the animation duration (optional)
+          once: false, // Whether animation should happen only once
+        });
+      }, []);
+      
     const { ref, inView } = useInView({
         triggerOnce: false, // Trigger animation every time the element comes into view
         threshold: 0.1, // Trigger when 10% of the element is in view
@@ -24,7 +34,7 @@ function Contact() {
                         <p className="mb-6 font-light text-center text-gray-500 lg:mb-8 dark:text-gray-400 sm:text-lg">
                             Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
                         </p>
-                        <form className="space-y-6">
+                        <form className="space-y-6" data-aos="zoom-in-up">
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium dark:text-gray-300">
                                     Your email
@@ -32,7 +42,7 @@ function Contact() {
                                 <input
                                     type="email"
                                     id="email"
-                                    className="shadow-sm bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                    className="shadow-sm bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-primary-500 "
                                     placeholder="Enter your email"
                                     required
                                 />

@@ -1,8 +1,18 @@
-import React from "react";
+import { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 function About() {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration (optional)
+      once: false, // Whether animation should happen only once
+    });
+  }, []);
+  
   const { ref: titleRef, inView: isTitleInView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -95,7 +105,7 @@ function About() {
                 Relevant Coursework: Web Development, Data Structures, Database
                 Management
                 <br />
-                Achievements: Dean's List, Capstone Project on XYZ
+                Achievements: Dean's List, Assignment Project
               </motion.p>
             </div>
           </div>
