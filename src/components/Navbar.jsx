@@ -32,59 +32,56 @@ function Navbar() {
   };
 
   return (
-    
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 px-10 py-4 text-black transition-all duration-300 md:px-16 sm:px-8 lg:px-2${
-        isScrolled || isMobileMenuOpen
-          ? "bg-slate-50 shadow-lg"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 px-5 py-3 transition-all duration-300 lg:px-10 ${
+        isScrolled || isMobileMenuOpen ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between mx-auto ">
+      <div className="container flex items-center justify-between mx-auto max-w-7xl">
         {/* Logo */}
         <div className="text-xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-blue-700 via-teal-600 to-pink-500 bg-clip-text md:text-2xl">
           SengLeang
         </div>
 
-        {/* Navigation Links */}
-        <div className="hidden space-x-4 md:flex">
+        {/* Navigation Links (Desktop) */}
+        <div className="hidden space-x-6 md:flex">
           <a
             href="/"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Home
           </a>
           <a
             href="#about"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             About Me
           </a>
           <a
             href="#portfolio"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Portfolio
           </a>
           <a
             href="#contact"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Contact
           </a>
         </div>
 
-        {/* 'Connect Me' Social Media Icons */}
-        <div className="items-center hidden space-x-4 md:flex">
+        {/* Social Media Icons (Desktop) */}
+        <div className="hidden space-x-4 md:flex">
           <a
             href="https://web.facebook.com/yan.sengleang/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-blue-700 hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-blue-700 hover:scale-110"
           >
             <FaFacebook />
           </a>
@@ -92,7 +89,7 @@ function Navbar() {
             href="https://www.instagram.com/_sengleang/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-pink-600 hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-pink-600 hover:scale-110"
           >
             <FaInstagram />
           </a>
@@ -100,7 +97,7 @@ function Navbar() {
             href="https://www.linkedin.com/in/yan-sengleang-614a94277/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-blue-600 hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-blue-600 hover:scale-110"
           >
             <FaLinkedin />
           </a>
@@ -108,7 +105,7 @@ function Navbar() {
             href="https://github.com/Sengleang99"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-black hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-black hover:scale-110"
           >
             <FaGithub />
           </a>
@@ -127,7 +124,7 @@ function Navbar() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-50"
+          className="fixed inset-0 z-40 bg-black bg-opacity-50"
           onClick={toggleMobileMenu}
         />
       )}
@@ -146,28 +143,28 @@ function Navbar() {
         <div className="px-6 py-4 space-y-4">
           <a
             href="/"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Home
           </a>
           <a
             href="#about"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             About Me
           </a>
           <a
             href="#portfolio"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Portfolio
           </a>
           <a
             href="#contact"
-            className="block font-medium text-gray-500 transition hover:text-blue-700"
+            className="block font-medium text-gray-600 transition hover:text-blue-700"
             onClick={handleLinkClick}
           >
             Contact
@@ -178,7 +175,7 @@ function Navbar() {
             href="https://web.facebook.com/yan.sengleang/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-blue-700 hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-blue-700 hover:scale-110"
           >
             <FaFacebook />
           </a>
@@ -186,7 +183,7 @@ function Navbar() {
             href="https://www.instagram.com/_sengleang/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-pink-600 hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-pink-600 hover:scale-110"
           >
             <FaInstagram />
           </a>
@@ -194,7 +191,7 @@ function Navbar() {
             href="https://www.linkedin.com/in/yan-sengleang-614a94277/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-blue-600 hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-blue-600 hover:scale-110"
           >
             <FaLinkedin />
           </a>
@@ -202,7 +199,7 @@ function Navbar() {
             href="https://github.com/Sengleang99"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-gray-700 transition duration-300 transform hover:text-black hover:scale-110"
+            className="text-xl text-gray-600 transition duration-300 transform hover:text-black hover:scale-110"
           >
             <FaGithub />
           </a>
