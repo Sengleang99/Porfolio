@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import { FaLaptopCode,FaGraduationCap  } from "react-icons/fa";
+import { FaLaptopCode, FaGraduationCap } from "react-icons/fa";
 
 function About() {
   useEffect(() => {
@@ -13,22 +13,21 @@ function About() {
 
   return (
     <section
-      //py-20 text-white bg-gradient-to-r from-blue-700 to-purple-700
-      className="py-20 text-white bg-gradient-to-r from-blue-700 to-purple-700"
+      className="py-20 text-white bg-gradient-to-r from-blue-700 to-purple-700 "
       id="about"
     >
-      <div className="container flex flex-col items-center justify-center h-full px-8 mx-auto md:px-16 lg:px-24">
+      <div className="container flex flex-col items-center justify-center h-full px-4 mx-auto md:px-8 lg:px-16">
         <h2
-          className="mb-12 text-4xl font-extrabold tracking-tight text-center shadow-lg font-ex-trabold"
+          className="mb-12 text-3xl font-extrabold tracking-tight text-center shadow-lg md:text-4xl"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           About Me
         </h2>
-        <div className="flex flex-col items-center md:items-center">
+        <div className="flex flex-col items-center">
           <div className="w-full md:w-2/3">
             <p
-              className="mb-8 text-xl font-medium text-center text-white lg:mb-16 sm:text-2xl"
+              className="mb-8 text-lg font-medium text-center text-white md:text-xl lg:mb-16"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -39,7 +38,7 @@ function About() {
             </p>
             <div className="space-y-8">
               <h2
-                className="text-4xl font-bold shadow-md"
+                className="text-3xl font-bold shadow-md md:text-4xl"
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
@@ -51,32 +50,30 @@ function About() {
               <SkillProgress skill="Flutter" level="55%" />
               <SkillProgress skill="Firebase" level="55%" />
               <SkillProgress skill="Figma" level="65%" />
-              {/* Add more skills as needed */}
             </div>
             <div className="mt-12">
               {/* Education Section */}
               <h1
-                className="text-4xl font-extrabold shadow-md"
+                className="text-3xl font-extrabold shadow-md md:text-4xl"
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
                 Education
               </h1>
               <div
-                className="p-8 mt-8 rounded-lg shadow-lg bg-gradient-to-r from-purple-600 to-blue-600"
+                className="p-6 mt-6 rounded-lg shadow-lg md:p-8 md:mt-8 bg-gradient-to-r from-purple-600 to-blue-600"
                 data-aos="fade-up"
-                data-aos-delay="800"
+                
               >
-                <div className="flex items-start space-x-6">
+                <div data-aos="fade-up" className="flex flex-col items-start space-y-4 md:flex-row md:space-y-0 md:space-x-6">
                   <div className="text-2xl">
-                    {/* Add an icon for education */}
                     <FaGraduationCap />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-lg font-bold md:text-xl">
                       S.E. in Software Engineering
                     </h3>
-                    <p className="mt-2 text-lg font-medium text-white">
+                    <p  className="mt-2 text-base font-medium text-white md:text-lg">
                       <span className="block">
                         Beltei International University, currently three years
                       </span>
@@ -95,29 +92,28 @@ function About() {
 
               {/* Experience Section */}
               <h1
-                className="mt-12 text-4xl font-extrabold shadow-md"
+                className="mt-12 text-3xl font-extrabold shadow-md md:text-4xl"
                 data-aos="fade-up"
-                data-aos-delay="600"
+               
               >
                 Experience
               </h1>
               <div
-                className="p-8 mt-8 rounded-lg shadow-lg bg-gradient-to-r from-purple-600 to-blue-600"
+                className="p-6 mt-6 rounded-lg shadow-lg md:p-8 md:mt-8 bg-gradient-to-r from-purple-600 to-blue-600"
                 data-aos="fade-up"
-                data-aos-delay="800"
+               
               >
-                <div className="flex items-start space-x-6">
+                <div className="flex flex-col items-start space-y-4 md:flex-row md:space-y-0 md:space-x-6">
                   <div className="text-2xl">
-                    {/* You can use icons from any library like FontAwesome */}
                     <FaLaptopCode />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-lg font-bold md:text-xl">
                       Software Developer Intern
                     </h3>
-                    <p className="mt-2 text-lg font-medium text-white">
-                    <span className="block">
-                        Three month - 2024
+                    <p className="mt-2 text-base font-medium text-white md:text-lg">
+                      <span className="block">
+                        Poscar Digital: Three month - 2024
                       </span>
                       <span className="block">
                         Researched documents for analytics database.
@@ -144,8 +140,8 @@ function About() {
 function SkillProgress({ skill, level }) {
   return (
     <div className="flex items-center" data-aos="fade-left">
-      <span className="w-3/12 text-left">{skill}</span>
-      <div className="relative w-9/12 h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-md">
+      <span className="w-3/12 text-base text-left md:text-lg">{skill}</span>
+      <div className="relative w-9/12 h-2 overflow-hidden rounded-full shadow-md bg-slate-100">
         <div
           className="absolute top-0 left-0 h-full transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-400 to-blue-500 hover:scale-105"
           style={{ width: level }}

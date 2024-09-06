@@ -30,7 +30,7 @@ function Hero() {
   });
 
   return (
-    <div className="py-12 text-center bg-white">
+    <div className="container px-4 py-12 mx-auto text-center md:px-8 lg:px-16">
       <motion.img 
         src={Profile} 
         alt="Profile Picture" 
