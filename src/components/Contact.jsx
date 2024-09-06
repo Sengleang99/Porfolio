@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
@@ -13,25 +11,18 @@ function Contact() {
         });
       }, []);
       
-    const { ref, inView } = useInView({
-        triggerOnce: false, // Trigger animation every time the element comes into view
-        threshold: 0.1, // Trigger when 10% of the element is in view
-    });
 
     return (
         <div className='text-black bg-slate-50' id='contact'>
             <div className='container flex flex-col items-center justify-center h-full px-4 mx-auto md:px-8 lg:px-16'>
-                <section ref={ref} className="bg-white">
-                    <motion.div
+                <section className="bg-white">
+                    <div
                         className="max-w-screen-md px-4 py-8 mx-auto lg:py-16"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
                     >
-                        <h2 className="mb-4 text-5xl font-extrabold tracking-tight text-center text-gray-900 sm:text-center sm:text-4xl">
+                        <h2 data-aos="zoom-in-up" className="mb-4 text-4xl font-extrabold tracking-tight text-center text-gray-900 sm:text-center sm:text-3xl">
                             Contact Me
                         </h2>
-                        <p className="mb-6 font-light text-center text-gray-500 lg:mb-8 dark:text-gray-400 sm:text-lg">
+                        <p data-aos="zoom-in-up"  className="mb-6 font-light text-center text-gray-500 lg:mb-8 dark:text-gray-400 sm:text-lg">
                             Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
                         </p>
                         <form className="space-y-6" data-aos="zoom-in-up">
@@ -42,7 +33,7 @@ function Contact() {
                                 <input
                                     type="email"
                                     id="email"
-                                    className="shadow-sm bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-primary-500 "
+                                    className="shadow-sm bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-primary-500"
                                     placeholder="Enter your email"
                                     required
                                 />
@@ -70,17 +61,16 @@ function Contact() {
                                     placeholder="Leave a comment..."
                                 ></textarea>
                             </div>
-                            <motion.button
+                            <button
                                 type="submit"
                                 className="px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-primary-800"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.9 }}
-                                transition={{ duration: 0.5, delay: 0.4 }}
+                                data-aos="fade-up"
+                                data-aos-delay="400"
                             >
                                 Send message
-                            </motion.button>
+                            </button>
                         </form>
-                    </motion.div>
+                    </div>
                 </section>
             </div>
         </div>

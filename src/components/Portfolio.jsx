@@ -64,7 +64,7 @@ function Portfolio() {
                     </div>
 
                     {projects.length > 6 && (
-                        <div className="flex justify-center mt-6">
+                        <div data-aos="zoom-in" className="flex justify-center mt-6">
                             <button 
                                 onClick={handleToggleShowAll} 
                                 className="px-6 py-3 font-semibold text-white bg-blue-600 rounded hover:bg-blue-500"
