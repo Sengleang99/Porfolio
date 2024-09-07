@@ -131,7 +131,7 @@ function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-white shadow-lg transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-50 w-60 md:w-1/2 h-full bg-white shadow-lg transition-transform duration-300 ${
           isMobileMenuOpen
             ? "transform translate-x-0"
             : "transform -translate-x-full"
