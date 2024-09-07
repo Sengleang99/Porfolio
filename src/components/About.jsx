@@ -23,6 +23,7 @@ function About() {
     >
       <div className="container flex flex-col items-center justify-center h-full px-8 mx-auto md:px-16 lg:px-24">
         <h2
+        
           className={`mb-12 text-5xl font-extrabold tracking-tight text-center shadow-lg ${isTitleInView ? 'opacity-100' : 'opacity-0'}`}
           ref={titleRef}
           style={{ transition: 'opacity 0.5s ease-out' }}
@@ -49,11 +50,12 @@ function About() {
               >
                 Skills
               </h2>
-              <SkillProgress skill="React Js" level="75%" />
+              <SkillProgress skill="React Js" level="70%" />
               <SkillProgress skill="PHP & Laravel" level="75%" />
-              <SkillProgress skill="SQL & Mysql" level="75%" />
-              <SkillProgress skill="Flutter" level="60%" />
-              <SkillProgress skill="Figma" level="75%" />
+              <SkillProgress skill="SQL & Mysql" level="70%" />
+              <SkillProgress skill="Flutter" level="55%" />
+              <SkillProgress skill="Firebase" level="55%" />
+              <SkillProgress skill="Figma" level="65%" />
               {/* Add more skills as needed */}
             </div>
             <div className="mt-12">
