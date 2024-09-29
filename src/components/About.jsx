@@ -23,19 +23,24 @@ function About() {
     >
       <div className="container flex flex-col items-center justify-center h-full px-8 mx-auto md:px-16 lg:px-24">
         <h2
-        
-          className={`mb-12 text-5xl font-extrabold tracking-tight text-center shadow-lg ${isTitleInView ? 'opacity-100' : 'opacity-0'}`}
+          className={`mb-12 text-4xl font-extrabold tracking-tight text-center ${
+            isTitleInView ? "opacity-100" : "opacity-0"
+          }`}
           ref={titleRef}
-          style={{ transition: 'opacity 0.5s ease-out' }}
+          style={{ transition: "opacity 0.5s ease-out" }}
         >
           About Me
         </h2>
         <div className="flex flex-col items-center md:items-center">
           <div className="w-full md:w-2/3">
             <p
-              className={`mb-8 text-xl font-medium text-center text-white lg:mb-16 sm:text-2xl ${isParagraphInView ? 'opacity-100' : 'opacity-0'} ${isParagraphInView ? 'translate-y-0' : 'translate-y-5'}`}
+              className={`mb-8 text-xl font-medium text-center text-white lg:mb-16 sm:text-2xl ${
+                isParagraphInView ? "opacity-100" : "opacity-0"
+              } ${isParagraphInView ? "translate-y-0" : "translate-y-5"}`}
               ref={paragraphRef}
-              style={{ transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}
+              style={{
+                transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+              }}
             >
               I am a passionate Web & App Developer with a strong focus on
               building modern, responsive web and app applications. With a solid
@@ -44,9 +49,13 @@ function About() {
             </p>
             <div className="space-y-8">
               <h2
-                className={`text-4xl font-bold shadow-md ${isSkillsInView ? 'opacity-100' : 'opacity-0'} ${isSkillsInView ? 'translate-y-0' : 'translate-y-5'}`}
+                className={`text-4xl font-bold shadow-md ${
+                  isSkillsInView ? "opacity-100" : "opacity-0"
+                } ${isSkillsInView ? "translate-y-0" : "translate-y-5"}`}
                 ref={skillsRef}
-                style={{ transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}
+                style={{
+                  transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+                }}
               >
                 Skills
               </h2>
@@ -86,13 +95,9 @@ function About() {
                       <span className="block">
                         Beltei International University, currently in progress
                       </span>
-                      <span className="block mt-4">
-                        <strong>Relevant Coursework:</strong> Web Development,
-                        Data Structures, Database Management
-                      </span>
-                      <span className="block mt-2">
-                        <strong>Achievements:</strong> Dean's List, Project Awards
-                      </span>
+                      <span className="block mt-4">Web Development</span>
+                      <span className="block mt-4">Data Structures</span>
+                      <span className="block mt-4">Database Management</span>
                     </p>
                   </div>
                 </div>
@@ -115,21 +120,19 @@ function About() {
                   </div>
                   <div className="flex flex-col">
                     <h3 className="text-lg font-bold sm:text-xl md:text-2xl">
-                      Software Developer Intern
+                      P-Hearth Project (Volunteer 3 months)
                     </h3>
                     <p className="mt-2 text-base font-medium text-white sm:text-lg">
-                      <span className="block">
-                        Poscar Digital: Three months - 2024
+                      <span className="block mt-4">
+                        I work as software developer
                       </span>
-                      <span className="block">
-                        Conducted research for analytics database.
+                      <span className="block mt-4">
+                        Create mobile app using flutter and firebase
                       </span>
-                      <span className="block mt-2">
-                        Developed a mobile project using Flutter.
+                      <span className="block mt-4">
+                        Create prototype using figma
                       </span>
-                      <span className="block mt-2">
-                        Utilized Firebase for data storage and user authentication.
-                      </span>
+                      <span className="block mt-4">Analytics database</span>
                     </p>
                   </div>
                 </div>
@@ -152,13 +155,17 @@ function SkillProgress({ skill, level }) {
     <div
       className="flex items-center"
       ref={ref}
-      style={{ opacity: inView ? 1 : 0, transform: inView ? 'translateX(0)' : 'translateX(-20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateX(0)" : "translateX(-20px)",
+        transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+      }}
     >
       <span className="w-3/12 text-left">{skill}</span>
       <div className="relative w-9/12 h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-md">
         <div
           className="absolute top-0 left-0 h-full bg-gradient-to-r from-pink-400 to-blue-500 hover:scale-105"
-          style={{ width: level, transition: 'width 0.5s ease-out' }}
+          style={{ width: level, transition: "width 0.5s ease-out" }}
         ></div>
       </div>
     </div>
