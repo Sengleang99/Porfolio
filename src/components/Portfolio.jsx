@@ -31,7 +31,7 @@ function Portfolio() {
         { id: 6, title: 'Web Front-End Data Analytic', image: Data_Analytic_Image, url: 'https://manage-data-e5b6.vercel.app/' },
         { id: 7, title: 'Zendo', image: zando, url: 'https://www.example.com/project-six' },
         { id: 8, title: 'No avialable project', image: ProjectImage, url: 'https://www.example.com/project-seven' },
-        { id: 8, title: 'No avialable project', image: ProjectImage, url: 'https://www.example.com/project-seven' },
+        { id: 9, title: 'No avialable project', image: ProjectImage, url: 'https://www.example.com/project-seven' },
     ];
 
     const visibleProjects = showAll ? projects : projects.slice(0, 6);
