@@ -7,6 +7,9 @@ import folio from "../assets/Screenshot 2024-09-05 170105.png";
 import portal from "../assets/portal.png";
 import zando from "../assets/Screenshot 2024-09-05 171654.png";
 import pos from "../assets/Screenshot 2024-09-05 180526.png";
+import photo from "../assets/Screenshot 2024-10-05 194224.png";
+import news from "../assets/news.png";
+
 
 
 function Portfolio() {
@@ -23,11 +26,12 @@ function Portfolio() {
         { id: 1, title: 'My Web Portfolio', image: folio, url: 'https://porfolio-tawny-five.vercel.app/' },
         { id: 2, title: 'Fullstack POS System', image: pos, url: 'https://www.example.com/project-two' },
         { id: 3, title: 'Fullstack System Portal Student', image: portal, url: 'https://www.example.com/project-three' },
-        { id: 4, title: 'Mobile App Coffee App', image: ProjectImage, url: 'https://www.example.com/project-four' },
-        { id: 5, title: 'Web Front-End Zando', image: zando, url: 'https://www.example.com/project-five' },
+        { id: 4, title: 'Photography', image: photo, url: 'https://photographer-zeta.vercel.app/' },
+        { id: 5, title: 'Web News PHP', image: news, url: 'https://www.example.com/project-five' },
         { id: 6, title: 'Web Front-End Data Analytic', image: Data_Analytic_Image, url: 'https://manage-data-e5b6.vercel.app/' },
-        { id: 7, title: 'Additional Project 1', image: ProjectImage, url: 'https://www.example.com/project-six' },
-        { id: 8, title: 'Additional Project 2', image: ProjectImage, url: 'https://www.example.com/project-seven' },
+        { id: 7, title: 'Zendo', image: zando, url: 'https://www.example.com/project-six' },
+        { id: 8, title: 'No avialable project', image: ProjectImage, url: 'https://www.example.com/project-seven' },
+        { id: 8, title: 'No avialable project', image: ProjectImage, url: 'https://www.example.com/project-seven' },
     ];
 
     const visibleProjects = showAll ? projects : projects.slice(0, 6);
