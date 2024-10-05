@@ -7,7 +7,7 @@ import folio from "../assets/Screenshot 2024-09-05 170105.png";
 import portal from "../assets/portal.png";
 import zando from "../assets/Screenshot 2024-09-05 171654.png";
 import pos from "../assets/Screenshot 2024-09-05 180526.png";
-import photo from "../assets/Screenshot 2024-10-05 194224.png";
+import photo from "../assets/photo.png";
 import news from "../assets/news.png";
 
 
